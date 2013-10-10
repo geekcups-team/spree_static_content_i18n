@@ -1,7 +1,7 @@
 class AddTranslationsToPages < ActiveRecord::Migration
   def self.up
-    params = [:title => :string, :body => :string, :slug => :string, 
-      :foreign_link => :string, :meta_title => :string, :meta_keywords => :string, :meta_description => :string]
+    params = {:title => :string, :body => :string, :slug => :string, 
+      :foreign_link => :string, :meta_title => :string, :meta_keywords => :string, :meta_description => :string}
       Spree::Page.create_translation_table!(params, {
         :migrate_data => true
       })
